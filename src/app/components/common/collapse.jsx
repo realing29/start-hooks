@@ -28,12 +28,7 @@ const CollapseWrapper = ({ children, title, name }) => {
                     ></i>
                 </div>
                 <div className="collapse" ref={collapseRef} id={name + title}>
-                    {React.Children.map(children, (child, i) => (
-                        <>
-                            <span>{i + 1}</span>
-                            {React.cloneElement(child)}
-                        </>
-                    ))}
+                    {children}
                 </div>
             </div>
         </div>
